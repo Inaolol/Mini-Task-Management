@@ -33,7 +33,7 @@
     <div style="display:flex; gap:8px; margin-bottom: 16px;">
         <a href="{{ route('tasks.index', array_filter(['q' => request('q'), 'status' => null])) }}" style="padding:6px 10px; border-radius: 20px; border:1px solid #ddd; text-decoration:none; {{ request('status') === null ? 'background:#000;color:#fff;border-color:#000;' : '' }}">All</a>
         <a href="{{ route('tasks.index', array_filter(['q' => request('q'), 'status' => 'pending'])) }}" style="padding:6px 10px; border-radius: 20px; border:1px solid #ddd; text-decoration:none; {{ request('status') === 'pending' ? 'background:#000;color:#fff;border-color:#000;' : '' }}">Pending</a>
-        <a href="{{ route('tasks.index', array_filter(['q' => request('q'), 'status' => 'completed'])) }}" style="padding:6px 10px; border-radius: 20px; border:1px solid #ddd; text-decoration:none; {{ request('status') === 'completed' ? 'background:#000;color:#fff;border-color:#000;' : '' }}">Completed</a>\
+        <a href="{{ route('tasks.index', array_filter(['q' => request('q'), 'status' => 'completed'])) }}" style="padding:6px 10px; border-radius: 20px; border:1px solid #ddd; text-decoration:none; {{ request('status') === 'completed' ? 'background:#000;color:#fff;border-color:#000;' : '' }}">Completed</a>
     </div>
 
     @if (session('status'))
